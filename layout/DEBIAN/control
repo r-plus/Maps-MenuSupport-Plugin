@@ -1,0 +1,10 @@
+Package: jp.r-plus.actionmenumaps
+Name: Maps ActionMenu Plugin
+Depends: actionmenu
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Maps ActionMenu Plugin
+Maintainer: r_plus
+Author: r_plus
+Section: App Addons
+dev: rplus
