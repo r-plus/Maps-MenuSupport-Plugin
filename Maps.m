@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import <ActionMenu.h>
+#import <MenuSupport.h>
 
 @interface UIApplication()
 - (void)applicationOpenURL:(NSURL *)url;
@@ -9,7 +9,7 @@
 
 - (void)doMaps:(id)sender
 {
-    NSString *selection = [self selectedTextualRepresentation];
+    NSString *selection = [self ms_selectedTextualRepresentation];
     NSMutableString *string = [[NSMutableString alloc] initWithString:@"maps:q="];
     NSString *identifier = [[NSBundle mainBundle] bundleIdentifier];
     
@@ -33,8 +33,8 @@
 
 + (void)load
 {
-    id<AMMenuItem> mapsMenu = [[UIMenuController sharedMenuController] registerAction:@selector(doMaps:) title:@"Maps" canPerform:@selector(canDoMaps:)];
-    mapsMenu.image = [UIImage imageWithContentsOfFile:@"/Library/ActionMenu/Plugins/Maps.png"];
+    id<MSMenuItem> mapsMenu = [[UIMenuController sharedMenuController] ms_registerAction:@selector(doMaps:) title:@"Maps" canPerform:@selector(canDoMaps:)];
+    mapsMenu.image = [UIImage imageWithContentsOfFile:@"/Library/MenuSupport/Plugins/Maps.png"];
 }
 
 @end
