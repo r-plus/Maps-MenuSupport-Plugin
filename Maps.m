@@ -21,7 +21,7 @@
     if ([identifier isEqualToString:@"com.apple.springboard"]){
         [[UIApplication sharedApplication] applicationOpenURL:[NSURL URLWithString:string]];
     } else {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string] options:@{} completionHandler:nil];
     }
     [string release];
 }
